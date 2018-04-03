@@ -680,7 +680,7 @@ li.sale-noti > a {
 
 .main_menu > li:hover > a {
   text-decoration: none;
-  border-bottom: 1px solid #333333;
+
 }
 
 .main_menu li {
@@ -698,7 +698,7 @@ li.sale-noti > a {
   z-index: 1100;
   top:0;
   left:100%;
-  width: 225px;
+  width: 170px;
   background-color: #222222;
   opacity: 0;
   visibility: hidden;
