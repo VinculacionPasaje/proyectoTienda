@@ -13,6 +13,20 @@
 
          </div>
         <div class="col-md-6">
+            	@if (session('mensaje-registro'))
+				@include('mensajes.msj_correcto')
+			@endif
+			@if(!$errors->isEmpty())
+				<div class="alert alert-danger">
+					<p><strong>Error!! </strong>Corrija los siguientes errores</p>
+					<ul>
+						@foreach($errors->all() as $error)
+							<li>{{$error}}</li>
+						@endforeach
+					</ul>
+				</div>
+			@endif
+            
             <div class="panel panel-default">
                 <div class="panel-heading" style="font-size:  30px;text-align: center;padding-bottom: 15px;">Login</div>
 
@@ -21,11 +35,13 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail</label>
+                            <label for="email" class="col-md-4 control-label">E-Mail <span style="font-weight:bold;color:#e65540;"> *</span></label>
 
                             <div class="col-md-6" style="max-width: 100%;">
+                                <div class="input-group">
+                                    <span class="input-group-addon" style="border:none;"><i class="fa fa-envelope"> </i></span>
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Ingrese su email" required style="background-color: #f0f0f0;">
-
+                                </div>
                                 @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -35,11 +51,13 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                            <label for="password" class="col-md-4 control-label">Password <span style="font-weight:bold;color:#e65540;"> *</span></label>
 
                             <div class="col-md-6" style="max-width: 100%;">
+                                <div class="input-group">
+                                    <span class="input-group-addon" style="border:none;"><i class="fa fa-lock"> </i></span>
                                 <input id="password" type="password" class="form-control" name="password" placeholder="Ingrese contraseña" required style="background-color: #f0f0f0;">
-
+                                </div>
                                 @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>

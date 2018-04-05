@@ -60,7 +60,7 @@
 
 			<div class="wrap_header">
 						<!-- Logo -->
-						<a href="index.html" class="logo">
+						<a href="{{url ('/')}}" class="logo">
 							<img src="{{url('fotos/'.'logo.png')}}" >
 			
 						</a>
@@ -70,7 +70,7 @@
 							<nav class="menu">
 								<ul class="main_menu">
 									<li>
-										<a href="index.html">Home</a>
+										<a href="{{url ('/')}}">Home</a>
 										<ul class="sub_menu">
 											<li><a href="index.html">Homepage V1</a></li>
 											<li><a href="home-02.html">Homepage V2</a></li>
@@ -115,8 +115,7 @@
 									
 										<a href="#"><img src="{{url('fotos/'.'icon-header-01.png')}}" ></a>
 										<ul class="sub_menu">
-											 @if (Route::has('login'))
-                                                
+											
                                                     @if (Auth::check())
 
                                                    
@@ -138,13 +137,13 @@
 
 
                                                     @else
-                                                        <li><a href="{{ url('/login') }}">Login</a></li>
+                                                        <li ><a href="{{ url('/login') }}">Login</a></li>
                                                         
 
                                                         <li><a href="{{ url('/register') }}">Registro</a></li>
                                                     @endif
                                                 
-                                            @endif
+                                     
 										
 										</ul>
 									</li>
@@ -245,7 +244,7 @@
 		<!-- Header Mobile -->
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
-			<a href="index.html" class="logo-mobile">
+			<a href="{{url ('/')}}" class="logo-mobile">
 				<img src="{{url('fotos/'.'logo.png')}}" >
 			</a>
 
@@ -260,7 +259,7 @@
 									
 										<a href="#"><img src="{{url('fotos/'.'icon-header-01.png')}}" ></a>
 										<ul class="sub_menu">
-											 @if (Route::has('login'))
+											
                                                 
                                                     @if (Auth::check())
 
@@ -289,7 +288,7 @@
                                                         <li><a href="{{ url('/register') }}">Registro</a></li>
                                                     @endif
                                                 
-                                            @endif
+                                          
 										
 										</ul>
 									</li>
@@ -393,9 +392,9 @@
 					
 
 					<li class="item-menu-mobile">
-						<a href="index.html">Home</a>
+						<a href="{{url ('/')}}">Home</a>
 						<ul class="sub-menu">
-							 @if (Route::has('login'))
+							
                                                 
                                                     @if (Auth::check())
 
@@ -424,7 +423,7 @@
                                                         <li><a href="{{ url('/register') }}">Registro</a></li>
                                                     @endif
                                                 
-                                            @endif
+                                        
 							
 						</ul>
 						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
@@ -1403,6 +1402,8 @@
 		</div>
 
 		<div class="t-center p-l-15 p-r-15">
+
+			<!--
 			<a href="#">
 				<img class="h-size2" src="images/icons/paypal.png" alt="IMG-PAYPAL">
 			</a>
@@ -1422,6 +1423,7 @@
 			<a href="#">
 				<img class="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER">
 			</a>
+			-->
 
 			<div class="t-center s-text8 p-t-20">
 				Copyright © 2018 All rights reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>

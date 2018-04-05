@@ -536,8 +536,8 @@ iframe {
 /*[ Top bar ]
 ===========================================================*/
 .topbar {
-  height: 45px;
-  background-color: #f5f5f5;
+  height: 5px;
+  background-color: #ffffff;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -733,6 +733,7 @@ li.sale-noti > a {
   font-family: Montserrat-Regular;
   font-size: 13px;
   color: white;
+  font-weight:bold;
 }
 
 .sub_menu > li:hover > a {
@@ -2239,6 +2240,8 @@ li.sale-noti > a {
     margin-left: -6px;
   }
 }
+
+
 
 
 /*[ Modal video 01 ]
