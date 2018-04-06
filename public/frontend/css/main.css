@@ -750,7 +750,7 @@ li.sale-noti > a {
   display: flex;
   align-items: center;
   position: absolute;
-  right: 52px;
+  right: 100px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -800,7 +800,7 @@ li.sale-noti > a {
   height: 20px;
   width: 1px;
   background-color: #e5e5e5;
-  margin-left: 23px;
+  margin-left: 5px;
   margin-right: 23px;
   margin-top: 5px;
 }

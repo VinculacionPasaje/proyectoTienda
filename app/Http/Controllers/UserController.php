@@ -20,9 +20,10 @@ class UserController extends Controller
       */
       public function register(UserRequest $request)
       {
-              
+           
+            
         User::create([
-            'id' => $request['id'],
+            'dni' => $request['dni'],
             'name' => $request['name'],
             'last_name' => $request['last_name'],
             'address' => $request['address'],
@@ -31,6 +32,7 @@ class UserController extends Controller
             'rol_id'=>'2',
            
         ]);
+       
             return Redirect::to('login')->with('mensaje-registro', 'Usuario Registrado Correctamente, ahora proceda a logearse');
       }
 }

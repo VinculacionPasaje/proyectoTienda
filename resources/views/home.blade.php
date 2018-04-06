@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    <p>Bienvenido {!! Auth::user()->name.' '.Auth::user()->last_name !!}</p> 
                 </div>
             </div>
         </div>

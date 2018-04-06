@@ -122,14 +122,31 @@
 									<li>
 									
 										<a href="#"><img src="{{url('fotos/'.'icon-header-01.png')}}" ></a>
+										 @if (Auth::check())
+									     	<span style="font-size: 14px; font-weight:bold;">Bienvenido</span>
+											 <br>
+											 <span style="font-size: 12px;"> {!! Auth::user()->name.' '.Auth::user()->last_name !!}</span>
+									    	@endif
 										<ul class="sub_menu">
 
                                          
                                                 
-                                                    @if (Auth::check())
+                                                    @if (Auth::guest())
+
+													    <li><a href="{{ url('/login') }}">Login</a></li>
+                                                        
+
+                                                        <li><a href="{{ url('/register') }}">Registro</a></li>
 
                                                    
-                                                                        <li><a href="#">DASHBOARD</a></li>
+                                                                       
+                                                                        
+                                                          
+
+
+                                                    @else
+
+													       <li><a href="#">DASHBOARD</a></li>
                                                                         <li><a href="{{ route('logout') }}"
                                                                             onclick="event.preventDefault();
                                                                                         document.getElementById('logout-form').submit();"
@@ -142,15 +159,7 @@
                                                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                                             {{ csrf_field() }}
                                                                         </form>
-                                                                        
-                                                          
-
-
-                                                    @else
-                                                        <li><a href="{{ url('/login') }}">Login</a></li>
-                                                        
-
-                                                        <li><a href="{{ url('/register') }}">Registro</a></li>
+                                                      
                                                     @endif
                              
 
@@ -269,13 +278,30 @@
 									<li>
 									
 										<a href="#"><img src="{{url('fotos/'.'icon-header-01.png')}}" ></a>
+										 @if (Auth::check())
+									     	<span style="font-size: 14px; font-weight:bold;">Bienvenido</span>
+											 <br>
+											 <span style="font-size: 12px;"> {!! Auth::user()->name.' '.Auth::user()->last_name !!}</span>
+									    	@endif
 										<ul class="sub_menu">
 											
                                                 
-                                                    @if (Auth::check())
+                                                    @if (Auth::guest())
+
+													    <li><a href="{{ url('/login') }}">Login</a></li>
+                                                        
+
+                                                        <li><a href="{{ url('/register') }}">Registro</a></li>
 
                                                    
-                                                                        <li><a href="#">DASHBOARD</a></li>
+                                                                       
+                                                                        
+                                                          
+
+
+                                                    @else
+
+													       <li><a href="#">DASHBOARD</a></li>
                                                                         <li><a href="{{ route('logout') }}"
                                                                             onclick="event.preventDefault();
                                                                                         document.getElementById('logout-form').submit();"
@@ -288,15 +314,7 @@
                                                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                                             {{ csrf_field() }}
                                                                         </form>
-                                                                        
-                                                          
-
-
-                                                    @else
-                                                        <li><a href="{{ url('/login') }}">Login</a></li>
-                                                        
-
-                                                        <li><a href="{{ url('/register') }}">Registro</a></li>
+                                                      
                                                     @endif
                                                 
                                     
@@ -407,10 +425,22 @@
 						<ul class="sub-menu">
 							
                                                 
-                                                    @if (Auth::check())
+                                                     @if (Auth::guest())
+
+													    <li><a href="{{ url('/login') }}">Login</a></li>
+                                                        
+
+                                                        <li><a href="{{ url('/register') }}">Registro</a></li>
 
                                                    
-                                                                        <li><a href="#">DASHBOARD</a></li>
+                                                                       
+                                                                        
+                                                          
+
+
+                                                    @else
+
+													       <li><a href="#">DASHBOARD</a></li>
                                                                         <li><a href="{{ route('logout') }}"
                                                                             onclick="event.preventDefault();
                                                                                         document.getElementById('logout-form').submit();"
@@ -423,15 +453,7 @@
                                                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                                             {{ csrf_field() }}
                                                                         </form>
-                                                                        
-                                                          
-
-
-                                                    @else
-                                                        <li><a href="{{ url('/login') }}">Login</a></li>
-                                                        
-
-                                                        <li><a href="{{ url('/register') }}">Registro</a></li>
+                                                      
                                                     @endif
                                                 
                                   

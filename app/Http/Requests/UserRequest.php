@@ -23,7 +23,7 @@ class UserRequest extends FormRequest
  public function rules()
  {
      return [
-         'id' => 'required|max:10|unique:users',
+         'dni' => 'required|max:10|unique:users',
          'name' => 'required|max:255',
          'last_name' => 'required|max:255',
          'address' => 'required|max:255',
