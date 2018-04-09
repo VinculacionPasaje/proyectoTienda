@@ -15,4 +15,10 @@ class Rol extends Model
      'description',
      'state',
  ];
+
+  public function usuarios(){
+        return $this->hasMany(User::class);
+    }
+
+    
 }

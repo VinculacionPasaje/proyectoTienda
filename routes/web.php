@@ -12,7 +12,7 @@
 */
 
      Route::get('/', 'FrontendController@index');
-     Route::get('home', 'HomeController@index');
+
 
    // Authentication Routes...
         Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -28,4 +28,14 @@
        Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
        Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
        Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+
+        //aqui van todos los url del admin
+        Route::group(['middleware' => 'admin'], function () {
+            Route::get('administracion','FrontendController@admin');
+        });
+
+        Route::resource('administracion/roles','RolController');
+        Route::resource('administracion/usuarios','UsuarioController');
+
 

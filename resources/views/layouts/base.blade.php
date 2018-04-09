@@ -50,6 +50,8 @@
 <!--===============================================================================================-->
 
 		<link rel="stylesheet" href="{{url('frontend/css/mensajes.css')}}">
+		  <link rel="stylesheet" href="{{url('administration/dist/css/sweetalert.css')}}">
+        <link rel="stylesheet" href="{{url('administration/dist/css/alertify.css')}}">
 	
 </head>
 <body class="animsition">

@@ -19,4 +19,10 @@ class FrontendController extends Controller
      
        return view('home');
    }
+
+   public function admin(){
+    
+       return view('administration.index');
+   }
+   
 }
