@@ -126,7 +126,7 @@
                         <ul>
                              <li><a href="{{route('usuarios.index')}}"><i class="fa fa-list-ul"></i>Listado</a></li>
                        
-                              <li><a href="#"><i class="fa fa-file"></i> Agregar</a></li>
+                              <li><a href="{{route('usuarios.create')}}"><i class="fa fa-file"></i> Agregar</a></li>
                         </ul>
                     </li>
 
@@ -185,7 +185,15 @@
     <script type="text/javascript">
         $(document).ready(function() {
             setTimeout(function() {
-                $(".aprobado").fadeOut(300);
+                $(".aprobado").fadeOut(3000);
+            },3000);
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            setTimeout(function() {
+                $(".alert-danger").fadeOut(3000);
             },3000);
         });
     </script>

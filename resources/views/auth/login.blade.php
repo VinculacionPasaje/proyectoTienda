@@ -79,19 +79,39 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-md-8" style="max-width: 100%;">
-                                <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4" style="font-weight: bold;">
-                                    LOGIN
-                                </button>
+                        <div class="row">
 
-                               
-                            </div>
-                            <div class="col-md-6" style="max-width: 100%;text-align: center; padding-top: 15px;">
-                             <span>¿Eres nuevo? </span><span style="font-weight:bold;color:#e65540;"> Registrate</span>
+                                <div class="col-md-4" style="max-width: 100%;">
 
-                            </div>
+                                </div>
+
+                                <div class="col-md-4" style="max-width: 100%;">
+
+
+                                <div class="form-group">
+                                    <div class="col-md-4" style="max-width: 100%;">
+                                        <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4" style="font-weight: bold;">
+                                            LOGIN
+                                        </button>
+                                    </div>
+                                </div>
+
+                                </div>
+
+                                <div class="col-md-4" style="max-width: 100%;">
+
+                                </div>
+
                         </div>
+
+
+                        <div class="col-md-6" style="max-width: 100%;text-align: center; padding-top: 15px;">
+                             <span>¿Eres nuevo? </span> <a style="font-weight:bold;color:#e65540;" href="{{ url('/register') }}">Regístrate</a>
+
+                            </div>
+
+
+                        
                     </form>
                 </div>
             </div>

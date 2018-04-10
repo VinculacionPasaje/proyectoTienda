@@ -17,7 +17,7 @@
          </div>
 
         <div class="col-md-8">
-            	@if (session('mensaje-registro'))
+            @if (session('mensaje-registro'))
 				@include('mensajes.msj_correcto')
 			@endif
 			@if(!$errors->isEmpty())
@@ -49,11 +49,12 @@
 
                                                 <div class="input-group">
                                                     <span class="input-group-addon" style="border:none;"><i class="fa fa-address-card"> </i></span>
-                                                    <input id="dni" type="text" class="form-control" name="dni" value="{{ old('dni') }}" placeholder="Ingrese su identificación" required  style="background-color: #f0f0f0;">
+                                                    <input id="dni" type="text" class="form-control" name="dni" value="{{ old('dni') }}" placeholder="Ingrese su identificación"  required  style="background-color: #f0f0f0;">
                                                 </div>
-                                                @if ($errors->has('id'))
+                                               
+                                                @if ($errors->has('dni'))
                                                     <span class="help-block">
-                                                        <strong>{{ $errors->first('id') }}</strong>
+                                                        <strong>{{ $errors->first('dni') }}</strong>
                                                     </span>
                                                 @endif
                                             </div>
@@ -69,7 +70,7 @@
 
                                             <div class="input-group">
                                                 <span class="input-group-addon" style="border:none;"><i class="fa fa-user"> </i></span>
-                                            <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Ingrese sus nombres" required  style="background-color: #f0f0f0;">
+                                            <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Ingrese sus nombres"  required style="background-color: #f0f0f0;">
                                             </div>
                                             @if ($errors->has('name'))
                                                 <span class="help-block">
@@ -97,7 +98,7 @@
 
                                     <div class="input-group">
                                         <span class="input-group-addon" style="border:none;"><i class="fa fa-user"> </i></span>
-                                    <input id="last_name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" placeholder="Ingrese sus apellidos" required  style="background-color: #f0f0f0;">
+                                    <input id="last_name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" placeholder="Ingrese sus apellidos"  required style="background-color: #f0f0f0;">
                                     </div>
                                     @if ($errors->has('last_name'))
                                         <span class="help-block">
@@ -135,7 +136,7 @@
                              <div class="col-md-6" style="max-width: 100%;">
                                  <div class="input-group">
                                     <span class="input-group-addon" style="border:none;"><i class="fa fa-envelope"> </i></span>
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Ingrese su email" required style="background-color: #f0f0f0;">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Ingrese su email" required  style="background-color: #f0f0f0;">
                                 </div>
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -155,7 +156,7 @@
                              <div class="col-md-6" style="max-width: 100%;">
                                  <div class="input-group">
                                     <span class="input-group-addon" style="border:none;"><i class="fa fa-lock"> </i></span>
-                                <input id="password" type="password" class="form-control" name="password" placeholder="Ingrese su password" required style="background-color: #f0f0f0;">
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Ingrese su password" required  style="background-color: #f0f0f0;">
                                 </div>
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -175,7 +176,7 @@
                              <div class="col-md-6" style="max-width: 100%;">
                                  <div class="input-group">
                                     <span class="input-group-addon" style="border:none;"><i class="fa fa-lock"> </i></span>
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirme su password" required  style="background-color: #f0f0f0;">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirme su password"  required style="background-color: #f0f0f0;">
                                 </div>
                             </div>
                         </div>

@@ -1520,6 +1520,21 @@
 <!--===============================================================================================-->
 
     <script src="{{url('frontend/js/main.js')}}"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            setTimeout(function() {
+                $(".alert-danger").fadeOut(3000);
+            },3000);
+        });
+    </script>
+	
+	  <script type="text/javascript">
+        $(document).ready(function() {
+            setTimeout(function() {
+                $(".aprobado").fadeOut(3000);
+            },3000);
+        });
+    </script>
 
 </body>
 </html>

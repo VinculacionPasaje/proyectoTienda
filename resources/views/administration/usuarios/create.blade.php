@@ -33,14 +33,14 @@
                 <strong> Usuario Agregado Correctamente.</strong>
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
-            @include('administracion.usuarios.form.create')
+            @include('administration.usuarios.form.create')
             {!! Form::submit('Registrar',['class'=>'btn btn-primary']) !!}
             {!! Form::close() !!}
         </div>
     </div>
 @endsection
 @section('script')
-    <script src="{{url('administration/dist/js/usuarios/delete-usuarios.js')}}"></script>
+
     <script src="{{url('administration/dist/js/validaNumerosLetras.js')}}"></script>
     <script src="{{url('administration/dist/js/alertify.js')}}"></script>
 

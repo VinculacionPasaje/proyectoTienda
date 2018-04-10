@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
 use App\User;
-use App\Http\Requests\UserRequest;
+use App\Http\Requests\UsuarioRequest;
 use Illuminate\Validation\Rule;
 
 
@@ -49,8 +49,9 @@ class UsuarioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UserRequest $request)
+    public function store(UsuarioRequest $request)
     {
+       
         User::create([
             'dni' => $request['dni'],
             'name' => $request['name'],
@@ -111,7 +112,7 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UserRequest $request, $id)
+    public function update(Request $request, $id)
     {
 
         $data = $request; 
@@ -122,7 +123,7 @@ class UsuarioController extends Controller
                         'name'   => [ 'required', 'max:255' ],
                         'last_name' => [ 'required', 'max:255' ],  
                         'address' => [ 'required', 'max:255' ],  
-                        'password' => [ 'required', 'max:255', 'between:6,30' ],                        
+                                             
                         'email'     => [ 'required', Rule::unique('users')->ignore($usuario->id), ],
                         
                     ]);
@@ -135,7 +136,7 @@ class UsuarioController extends Controller
                     'dni' => $request['dni'],
                     'name' => $request['name'],
                     'address' => $request['address'],
-                    'last_name' => $request['apellido'],
+                    'last_name' => $request['last_name'],
                     'email' => $request['email'],
                    
                 ]);
@@ -146,7 +147,7 @@ class UsuarioController extends Controller
                     'dni' => $request['dni'],
                     'name' => $request['name'],
                     'address' => $request['address'],
-                    'last_name' => $request['apellido'],
+                    'last_name' => $request['last_name'],
                     'email' => $request['email'],
                     'password' => bcrypt($request['password']),
                 ]);
